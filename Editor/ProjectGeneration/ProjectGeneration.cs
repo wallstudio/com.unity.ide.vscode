@@ -394,6 +394,7 @@ namespace VSCodeEditor
 
         void SyncProjectFileIfNotChanged(string path, string newContents)
         {
+            newContents = newContents.Replace("<ReferenceOutputAssembly>false</ReferenceOutputAssembly>", "<ReferenceOutputAssembly>true</ReferenceOutputAssembly>"); 
             SyncFileIfNotChanged(path, newContents);
         }
 
